@@ -1,0 +1,23 @@
+<extension xmlns="http://ns.adobe.com/air/extension/3.5">
+	<id>net.mtvg.air.SocialExtension</id>
+	<versionNumber>1</versionNumber>
+	<platforms>
+		<platform name="iPhone-x86">
+			<applicationDeployment>
+				<nativeLibrary>libSocialExtension.a</nativeLibrary>
+				<initializer>ExtensionInitializer</initializer>
+				<finalizer>ExtensionFinalizer</finalizer>
+			</applicationDeployment>
+		</platform>
+		<platform name="iPhone-ARM">
+			<applicationDeployment>
+				<nativeLibrary>libSocialExtension.a</nativeLibrary>
+				<initializer>ExtensionInitializer</initializer>
+				<finalizer>ExtensionFinalizer</finalizer>
+			</applicationDeployment>
+		</platform>
+        <platform name="default">
+            <applicationDeployment/>
+        </platform>
+	</platforms>
+</extension>

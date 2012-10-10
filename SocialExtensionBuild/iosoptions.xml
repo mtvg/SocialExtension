@@ -1,0 +1,7 @@
+<platform xmlns="http://ns.adobe.com/air/extension/3.5">
+    <sdkVersion>6.0</sdkVersion>
+    <linkerOptions>
+        <option>-ios_version_min 6.0</option>
+        <option>-framework Social</option>
+    </linkerOptions>
+</platform>

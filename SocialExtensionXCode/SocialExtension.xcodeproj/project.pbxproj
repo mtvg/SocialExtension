@@ -1,0 +1,223 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		775423EF1625BB0900A79368 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 775423EE1625BB0900A79368 /* Foundation.framework */; };
+		775423F61625BB0900A79368 /* SocialExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 775423F51625BB0900A79368 /* SocialExtension.m */; };
+		775423FD1625BB3900A79368 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 775423FC1625BB3900A79368 /* Social.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		775423E91625BB0900A79368 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		775423EB1625BB0900A79368 /* libSocialExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSocialExtension.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		775423EE1625BB0900A79368 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		775423F21625BB0900A79368 /* SocialExtension-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SocialExtension-Prefix.pch"; path = "SocialExtension/SocialExtension-Prefix.pch"; sourceTree = "<group>"; };
+		775423F31625BB0900A79368 /* SocialExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SocialExtension.h; path = SocialExtension/SocialExtension.h; sourceTree = "<group>"; };
+		775423F51625BB0900A79368 /* SocialExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SocialExtension.m; path = SocialExtension/SocialExtension.m; sourceTree = "<group>"; };
+		775423FC1625BB3900A79368 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		77749EE61625CE630002C519 /* FlashRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashRuntimeExtensions.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		775423E81625BB0900A79368 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				775423FD1625BB3900A79368 /* Social.framework in Frameworks */,
+				775423EF1625BB0900A79368 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		775423E01625BB0900A79368 = {
+			isa = PBXGroup;
+			children = (
+				775423FC1625BB3900A79368 /* Social.framework */,
+				775423EE1625BB0900A79368 /* Foundation.framework */,
+				775423F31625BB0900A79368 /* SocialExtension.h */,
+				775423F51625BB0900A79368 /* SocialExtension.m */,
+				77749EE61625CE630002C519 /* FlashRuntimeExtensions.h */,
+				775423F21625BB0900A79368 /* SocialExtension-Prefix.pch */,
+				775423EC1625BB0900A79368 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		775423EC1625BB0900A79368 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				775423EB1625BB0900A79368 /* libSocialExtension.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		775423EA1625BB0900A79368 /* SocialExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 775423F91625BB0900A79368 /* Build configuration list for PBXNativeTarget "SocialExtension" */;
+			buildPhases = (
+				775423E71625BB0900A79368 /* Sources */,
+				775423E81625BB0900A79368 /* Frameworks */,
+				775423E91625BB0900A79368 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SocialExtension;
+			productName = SocialExtension;
+			productReference = 775423EB1625BB0900A79368 /* libSocialExtension.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		775423E21625BB0900A79368 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = MTVG;
+			};
+			buildConfigurationList = 775423E51625BB0900A79368 /* Build configuration list for PBXProject "SocialExtension" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 775423E01625BB0900A79368;
+			productRefGroup = 775423EC1625BB0900A79368 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				775423EA1625BB0900A79368 /* SocialExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		775423E71625BB0900A79368 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				775423F61625BB0900A79368 /* SocialExtension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		775423F71625BB0900A79368 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		775423F81625BB0900A79368 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		775423FA1625BB0900A79368 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SocialExtension.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SocialExtension/SocialExtension-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		775423FB1625BB0900A79368 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SocialExtension.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SocialExtension/SocialExtension-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		775423E51625BB0900A79368 /* Build configuration list for PBXProject "SocialExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				775423F71625BB0900A79368 /* Debug */,
+				775423F81625BB0900A79368 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		775423F91625BB0900A79368 /* Build configuration list for PBXNativeTarget "SocialExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				775423FA1625BB0900A79368 /* Debug */,
+				775423FB1625BB0900A79368 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 775423E21625BB0900A79368 /* Project object */;
+}

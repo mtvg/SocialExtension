@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" applicationDPI="160" initialize="init()">
+
+	<s:Form>
+		<s:Label text="iOS 6 Social Native Extension for AIR" fontWeight="bold"/>
+		<s:FormItem label="Text">
+			<s:TextInput id="shareText" text="Shared with AIR" width="220"/>
+		</s:FormItem>
+		<s:FormItem label="URL">
+			<s:TextInput id="shareURL" softKeyboardType="url" text="" width="220"/>
+		</s:FormItem>
+		<s:FormItem label="Image">
+			<s:HGroup>
+				<s:Image id="shareImage" source="{new FlashImage}" width="160" height="120"/>
+				<s:CheckBox id="switchImage" selected="true"/>
+			</s:HGroup>
+		</s:FormItem>
+		<s:HGroup>
+			<s:Button label="Twitter" click="share(SocialExtension.SERVICE_TWITTER)"/>
+			<s:Button label="Facebook" click="share(SocialExtension.SERVICE_FACEBOOK)"/>
+			<s:Button label="Weibo" click="share(SocialExtension.SERVICE_SINAWEIBO)"/>
+		</s:HGroup>
+		<s:Spacer height="10"/>
+		<s:Label id="info" color="0x666666"/>
+	</s:Form>
+	
+	<fx:Script>
+		<![CDATA[
+			import net.mtvg.air.SocialExtension;
+			
+			[Embed(source="Flash.jpg")]
+			private var FlashImage:Class;
+			
+			private var socialExt:SocialExtension;
+			
+			private function init():void
+			{
+				socialExt = new SocialExtension;
+				socialExt.addEventListener(Event.CANCEL, onCancel);
+				socialExt.addEventListener(Event.COMPLETE, onComplete);
+			}
+			
+			private function share(serviceType:int):void
+			{
+				if (socialExt.shareComposer(serviceType, shareText.text, shareURL.text, switchImage.selected?shareImage.bitmapData:null))
+					info.text = "Share composer opened";
+				else
+					info.text = "Share service not available";
+			}
+			
+			private function onCancel(e:Event):void
+			{
+				info.text = "Share cancelled";
+			}
+			
+			private function onComplete(e:Event):void
+			{
+				info.text = "Share success";
+			}
+		]]>
+	</fx:Script>
+	
+</s:Application>

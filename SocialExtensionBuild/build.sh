@@ -1,0 +1,2 @@
+#!/bin/bash
+adt -package -target ane SocialExtension.ane extension.xml -swc SocialExtensionIOS.swc -platform iPhone-ARM -C ios . -platformoptions iosoptions.xml -platform iPhone-x86 -C ios-simulator . -platformoptions iosoptions.xml -platform default -C default .
