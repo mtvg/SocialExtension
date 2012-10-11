@@ -24,7 +24,7 @@ FREObject composeViewController(FREContext ctx, void* funcData, uint32_t argc, F
     int32_t serviceTypeId;
     NSString *shareText;
     NSString *shareURL;
-    NSString *shareImage;
+    FREBitmapData bitmapData;
     
     // get serviceTypeId from arguments and check if it is an int between 0 and 2 included
     if (!( FRE_OK == FREGetObjectAsInt32(argv[0], &serviceTypeId) &&
@@ -51,17 +51,12 @@ FREObject composeViewController(FREContext ctx, void* funcData, uint32_t argc, F
     const uint8_t *shareTextPointer;
 	uint32_t shareURLLength;
     const uint8_t *shareURLPointer;
-	uint32_t shareImageLength;
-    const uint8_t *shareImagePointer;
     
     if (FRE_OK == FREGetObjectAsUTF8(argv[1], &shareTextLength, &shareTextPointer))
         shareText = [NSString stringWithUTF8String:(char*)shareTextPointer];
     
     if (FRE_OK == FREGetObjectAsUTF8(argv[2], &shareURLLength, &shareURLPointer))
         shareURL = [NSString stringWithUTF8String:(char*)shareURLPointer];
-    
-    if (FRE_OK == FREGetObjectAsUTF8(argv[3], &shareImageLength, &shareImagePointer))
-        shareImage = [NSString stringWithUTF8String:(char*)shareImagePointer];
     
     // create the view controller
     SLComposeViewController *socialController = [SLComposeViewController
@@ -75,7 +70,6 @@ FREObject composeViewController(FREContext ctx, void* funcData, uint32_t argc, F
     // load bitmapdata into UIImage
     // from http://forums.adobe.com/message/4201451
     
-    FREBitmapData bitmapData;
     if (FRE_OK == FREAcquireBitmapData(argv[3], &bitmapData))
     {
         int width       = bitmapData.width;
